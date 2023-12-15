@@ -16,6 +16,13 @@ class Book {
             this->ISBN = ISBN;
             this->checkedOut = false;
         }
+        // Default constructor
+        Book() {
+            title = "";
+            author = "";
+            ISBN = 0;
+            checkedOut = false;
+        }
         int checkOut() {
             if (checkedOut == true) {
                 return -1; // failed to check out
@@ -61,13 +68,13 @@ class Book {
 
 };
 
-int main() {
-    Book b1("The Iliad", "Homer", 1324001801);
-    Book b2("Fourth Wing (The Empyrean, 1)", "Rebecca Yarros", 1649374046);
-    cout << b1.toString() << endl;
-    cout << b2.toString() << endl;
-    b1.checkOut();
-    cout << b1.toString() << endl;
-    b1.checkIn();
-    cout << b1.toString() << endl;
-}
+// int main() {
+//     Book b1("The Iliad", "Homer", 1324001801);
+//     Book b2("Fourth Wing (The Empyrean, 1)", "Rebecca Yarros", 1649374046);
+//     cout << b1.toString() << endl;
+//     cout << b2.toString() << endl;
+//     b1.checkOut();
+//     cout << b1.toString() << endl;
+//     b1.checkIn();
+//     cout << b1.toString() << endl;
+// }
